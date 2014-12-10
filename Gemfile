@@ -6,7 +6,7 @@ gem "eventmachine", :git => "https://github.com/eventmachine/eventmachine"
 
 gem "middleman", "~>3.3.7"
 
-gem "middleman-deploy"
+gem "middleman-deploy", :git => "https://github.com/whitetrefoil/middleman-deploy"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
