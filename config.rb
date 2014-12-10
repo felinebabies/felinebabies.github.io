@@ -1,4 +1,4 @@
-###
+ï»¿###
 # Compass
 ###
 
@@ -70,7 +70,7 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-# ƒfƒvƒƒC‚Ìİ’è
+# ãƒ‡ãƒ—ãƒ­ã‚¤ã®è¨­å®š
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
