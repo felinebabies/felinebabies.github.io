@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %title
+      = current_page.data.title || "Feline babies games"
+    = stylesheet_link_tag "normalize", "common"
+  %body
+    .container
+      %header
+
+      .sidebar
+
+      %article
+        = yield
+
+      %footer
