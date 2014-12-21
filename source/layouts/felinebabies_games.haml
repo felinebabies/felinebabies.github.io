@@ -5,13 +5,17 @@
     %title
       = current_page.data.title || "Feline babies games"
     = stylesheet_link_tag "normalize", "common"
+    = javascript_include_tag "all"
   %body
     .container
       %header
+        = image_tag 'header001.png',{width: '960px', height:'90px'}
 
       .sidebar
+        menu
 
-      %article
+      %article.content
         = yield
 
       %footer
+        FB GAMES

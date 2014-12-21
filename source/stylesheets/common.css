@@ -6,8 +6,44 @@ body {
 	padding: 0;
 	color: #000;
 }
+
+html,body {
+  height: 100%;
+}
+
 .container {
 	width: 960px;
-	background-color: #FFFFFF;
+	height: 100%;
+	min-height: 100%;
 	margin: 0 auto;
+}
+
+header {
+	height:90px;
+	background-color: #FFFFCC
+}
+
+footer {
+	width: 960px;
+	height: 20px;
+	float: right;
+	background-color: #FFFFCC
+}
+
+.content {
+	width: 750px;
+	display: block;
+	float: right;
+	background-color: #EEEEEE;
+}
+
+body > .container {
+	height: auto;
+}
+
+.sidebar {
+	float: left;
+  width :180px;
+	height :100%;
+	background-color: #CCCCDD;
 }
