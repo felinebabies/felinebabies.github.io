@@ -1,0 +1,12 @@
+---
+- - top
+  - /index.html
+- - about
+  - /about.html
+- - game
+  - /game/index.html
+- - novel
+  - /novels/index.html
+- - words
+  - /words/index.html
+  

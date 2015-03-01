@@ -9,10 +9,11 @@
   %body
     .container
       %header
-        = image_tag 'header001.png',{width: '960px', height:'90px'}
+        = link_to '/index.html' do
+          = image_tag 'header001.png',{width: '960px', height:'90px'}
 
       .sidebar
-        menu
+        = partial 'sidebar'
 
       %article.content
         = yield
