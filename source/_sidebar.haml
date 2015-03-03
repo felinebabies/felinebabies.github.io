@@ -1,4 +1,8 @@
 %ul
-  - data.sidebar.each do |item|
-    %li
-      = link_to item[0], item[1]
+  - data.sidebar.each_with_index do |item, i|
+    - if i == 0 then
+      %li.FirstItem
+        = link_to item[0], item[1]
+    - else
+      %li
+        = link_to item[0], item[1]
