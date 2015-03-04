@@ -1,8 +1,16 @@
 ---
 title: Primates selection Novels
 ---
-%h1
-  小説一覧
-- sitemap.where(:doctype.equal => "novel").all.each do |item|
-  %p
-    = link_to item.data.title, item.url
+.section
+  %h1
+    小説一覧
+  - sitemap.where(:doctype.equal => "novel").all.each do |item|
+    .topic
+      %p
+        = link_to item.data.title, item.url
+      %p
+        タグ：
+        - item.data.tags.each_with_index do|tag, index|
+          -if index != 0 then
+            ,
+          = tag
