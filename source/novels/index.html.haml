@@ -1,0 +1,8 @@
+---
+title: Primates selection Novels
+---
+%h1
+  小説一覧
+- sitemap.where(:doctype.equal => "novel").all.each do |item|
+  %p
+    = link_to item.data.title, item.url
