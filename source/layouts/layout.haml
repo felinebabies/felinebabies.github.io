@@ -13,7 +13,7 @@
           = image_tag 'header001.png',{width: '960px', height:'90px'}
 
       .sidebar
-        = partial 'sidebar'
+        = partial 'sidebar', :locals => {:current => current_page.data.current}
 
       %article.content
         = yield

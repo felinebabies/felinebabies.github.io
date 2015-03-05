@@ -1,8 +1,12 @@
 %ul
   - data.sidebar.each_with_index do |item, i|
-    - if i == 0 then
-      %li.FirstItem
-        = link_to item[0], item[1]
-    - else
-      %li
-        = link_to item[0], item[1]
+    :ruby
+      classArray = []
+      if i == 0 then
+        classArray << "FirstItem"
+      end
+      if item[0] == current then
+        classArray << "Current"
+      end
+    %li{:class => classArray.join(' ')}
+      = link_to item[0], item[1]

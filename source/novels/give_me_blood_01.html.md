@@ -1,6 +1,7 @@
 ---
 title: その血液をください。第一話　死にます。
 doctype: novel
+current: novel
 tags:
   - その血液をください。
   - 22世紀

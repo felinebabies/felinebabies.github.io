@@ -1,5 +1,6 @@
 ---
 title: Primates selection Novels
+current: novel
 ---
 .section
   %h1
@@ -14,3 +15,13 @@ title: Primates selection Novels
           -if index != 0 then
             ,
           = tag
+  %h2
+    タグ一覧
+  :ruby
+    tagArray = sitemap.where(:doctype.equal => "novel").all.map do |item|
+      item.data.tags
+    end
+    tagArray.flatten.uniq!
+  .topic
+    %p
+      = tagArray.join(' ')

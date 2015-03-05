@@ -1,6 +1,7 @@
 ---
 title: 遅れて来た幼少期
 doctype: novel
+current: novel
 tags:
   - ショートショート
   - 21世紀
