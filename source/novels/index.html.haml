@@ -2,9 +2,9 @@
 title: Primates selection Novels
 current: novel
 ---
+%h1
+  小説一覧
 .section
-  %h1
-    小説一覧
   - sitemap.where(:doctype.equal => "novel").all.each do |item|
     .topic
       %p

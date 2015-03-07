@@ -2,11 +2,10 @@
 - - top
   - /index.html
 - - about
-  - /about.html
+  - /about/index.html
 - - game
   - /game/index.html
 - - novel
   - /novels/index.html
 - - words
   - /words/index.html
-  

@@ -18,6 +18,8 @@
       %article.content
         - if current_page.data.doctype == 'novel' then
           = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
+        - if current_page.data.doctype == 'word' then
+          = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
         = yield
 
       %footer
