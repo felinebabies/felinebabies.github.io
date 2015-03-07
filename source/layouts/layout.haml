@@ -16,6 +16,8 @@
         = partial 'sidebar', :locals => {:current => current_page.data.current}
 
       %article.content
+        - if current_page.data.doctype == 'novel' then
+          = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
         = yield
 
       %footer

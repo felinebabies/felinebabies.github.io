@@ -9,4 +9,6 @@
         classArray << "Current"
       end
     %li{:class => classArray.join(' ')}
-      = link_to item[0], item[1]
+      = link_to item[1] do
+        %span.LinkLabel
+          = item[0]

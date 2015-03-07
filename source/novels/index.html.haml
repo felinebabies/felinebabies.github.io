@@ -10,11 +10,7 @@ current: novel
       %p
         = link_to item.data.title, item.url
       %p
-        タグ：
-        - item.data.tags.each_with_index do|tag, index|
-          -if index != 0 then
-            ,
-          = link_to tag, "indexbytag.html\##{tag}"
+        = partial 'taglist', :locals => {:tagArray => item.data.tags, :linkPage => '/novels/indexbytag.html'}
   %h2
     タグ一覧
   :ruby
