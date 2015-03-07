@@ -14,14 +14,15 @@ current: novel
         - item.data.tags.each_with_index do|tag, index|
           -if index != 0 then
             ,
-          = tag
+          = link_to tag, "indexbytag.html\##{tag}"
   %h2
     タグ一覧
   :ruby
     tagArray = sitemap.where(:doctype.equal => "novel").all.map do |item|
       item.data.tags
     end
-    tagArray.flatten.uniq!
+    tagArray.flatten!.uniq!
   .topic
     %p
-      = tagArray.join(' ')
+      -tagArray.each do |tag|
+        = link_to tag, "indexbytag.html\##{tag}"
