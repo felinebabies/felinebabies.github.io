@@ -11,15 +11,7 @@ current: top
   %h2
     Updates
   .topic
-    %dl
-      %dt
-        2015/03/09
-      %dd
-        novelに、「踏み出した先第一話」二章までを追加しました。
-      %dt
-        2015/03/04
-      %dd
-        サイトテンプレート構築作業中。
+    = partial 'updates', :locals => {:updates => data.updates }
 
   %h2
     License
