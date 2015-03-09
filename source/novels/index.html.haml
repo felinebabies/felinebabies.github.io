@@ -6,7 +6,10 @@ current: novel
   小説一覧
 .section
   - sitemap.where(:doctype.equal => "novel").all.each do |item|
-    .topic
+    - tagArray = ['topic']
+    - if item.data.tags.include? '性的表現' then
+      - tagArray << 'bg_pink'
+    %div{:class => tagArray.join(' ')}
       %p
         = link_to item.data.title, item.url
       %p
