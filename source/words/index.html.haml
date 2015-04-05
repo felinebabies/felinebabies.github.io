@@ -4,10 +4,10 @@ current: words
 ---
 %h1
   用語集
-.section
-  - sitemap.where(:doctype.equal => "word").all.each do |item|
+- sitemap.where(:doctype.equal => "word").all.each do |item|
+  .section
+    %h2
+      = link_to item.data.title, item.url
     .topic
-      %p
-        = link_to item.data.title, item.url
       %p
         = partial 'taglist', :locals => {:tagArray => item.data.tags, :linkPage => '/words/indexbytag.html'}

@@ -4,16 +4,17 @@ current: novel
 ---
 %h1
   小説一覧
-.section
-  - sitemap.where(:doctype.equal => "novel").all.each do |item|
-    - tagArray = ['topic']
-    - if item.data.tags.include? '性的表現' then
-      - tagArray << 'bg_pink'
+- sitemap.where(:doctype.equal => "novel").all.each do |item|
+  - tagArray = ['topic']
+  - if item.data.tags.include? '性的表現' then
+    - tagArray << 'bg_pink'
+  .section
+    %h2
+      = link_to item.data.title, item.url
     %div{:class => tagArray.join(' ')}
       %p
-        = link_to item.data.title, item.url
-      %p
         = partial 'taglist', :locals => {:tagArray => item.data.tags, :linkPage => '/novels/indexbytag.html'}
+.section
   %h2
     タグ一覧
   :ruby
