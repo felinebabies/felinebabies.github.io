@@ -4,7 +4,7 @@
     %meta{charset: "utf-8"}
     %title
       = current_page.data.title || "Primates selection"
-    = stylesheet_link_tag "normalize", "common"
+    = stylesheet_link_tag "normalize", "common", "simplegrid"
     = javascript_include_tag "all"
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,19 +15,25 @@
       ga('send', 'pageview');
   %body
     .container
-      %header
-        = link_to '/index.html' do
-          = image_tag 'header001.png',{width: '960px', height:'90px'}
+      .grid
+        .col-1-1
+          %header
+            = link_to '/index.html' do
+              = image_tag 'header001.png',{width: '960px', height:'90px'}
+      .grid
+        .col-3-12
+          .sidebar
+            = partial 'sidebar', :locals => {:current => current_page.data.current}
 
-      .sidebar
-        = partial 'sidebar', :locals => {:current => current_page.data.current}
+        .col-9-12
+          %article.content
+            - if current_page.data.doctype == 'novel' then
+              = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
+            - if current_page.data.doctype == 'word' then
+              = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
+            = yield
 
-      %article.content
-        - if current_page.data.doctype == 'novel' then
-          = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
-        - if current_page.data.doctype == 'word' then
-          = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
-        = yield
-
-      %footer
-        Copyright &copy; 2015 Syuji, &copy; 2015 Vestalis Quintet
+      .grid
+        .col-1-1
+          %footer
+            Copyright &copy; 2015 Syuji, &copy; 2015 Vestalis Quintet
