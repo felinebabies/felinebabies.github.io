@@ -7,9 +7,10 @@ current: novel
 - sitemap.where(:doctype.equal => "novel").all.each do |item|
   - tagArray = ['topic']
   - if item.data.tags.include? '性的表現' then
+    - h2class = 'bg_pink'
     - tagArray << 'bg_pink'
   .section
-    %h2
+    %h2{:class => h2class}
       = link_to item.data.title, item.url
     %div{:class => tagArray.join(' ')}
       %p
