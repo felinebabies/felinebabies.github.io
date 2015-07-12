@@ -18,3 +18,6 @@ current: novel
       - sitemap.where(:doctype.equal => "novel").where(:tags.include => tag).all.each do |item|
         %p
           = link_to item.data.title, item.url
+          - if item.data.tags.find() {|itag| itag == "性的表現"} != nil then
+            %span.mature_tag
+              性的表現有
