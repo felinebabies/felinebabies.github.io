@@ -1,0 +1,40 @@
+table {
+border: 1px #000000 solid;
+border-collapse: collapse;
+}
+
+tr {
+}
+td {
+border: none;
+}
+
+input#execbutton {
+width: 250px;
+height: 50px;
+font-size: xx-large;
+}
+
+input[type=checkbox] {
+display:none;
+}
+
+label {
+border-left: solid 1px #444444;
+border-bottom: solid 1px #444444;
+width: 20px;
+height: 20px;
+display: inline-block;
+margin: 0px;
+opacity: 0.4;
+cursor: pointer;
+position:relative;
+top:0px;
+border-radius:50px;
+-webkit-border-radius:50px;
+-moz-border-radius:50px;
+}
+
+input[type=checkbox]:checked + label {
+background-color: rgb(128,128,128);
+}
