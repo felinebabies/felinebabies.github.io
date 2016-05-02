@@ -6,7 +6,7 @@ current: novel
   %h1
     タグ別小説一覧
   :ruby
-    tagArray = sitemap.where(:doctype.equal => "novel").all.map do |item|
+    tagArray = sitemap.resources.select {|item| item.data['doctype'] == 'novel'}.map do |item|
       item.data.tags
     end
     tagArray.flatten!.uniq!
@@ -15,7 +15,7 @@ current: novel
     %h2{:id => tag}
       = tag
     .topic
-      - sitemap.where(:doctype.equal => "novel").where(:tags.include => tag).all.each do |item|
+      - sitemap.resources.select {|item| item.data['doctype'] == 'novel' && item.data.has_key?('tags') && item.data['tags'].include?(tag)}.each do |item|
         %p
           = link_to item.data.title, item.url
           - if item.data.tags.find() {|itag| itag == "性的表現"} != nil then

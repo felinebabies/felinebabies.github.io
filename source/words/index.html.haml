@@ -4,7 +4,7 @@ current: words
 ---
 %h1
   用語集
-- sitemap.where(:doctype.equal => "word").all.each do |item|
+- sitemap.resources.select {|item| item.data['doctype'] == 'word'}.each do |item|
   .section
     %h2
       = link_to item.data.title, item.url

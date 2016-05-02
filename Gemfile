@@ -2,11 +2,7 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem "eventmachine", :git => "https://github.com/eventmachine/eventmachine"
-
-gem "middleman", "~>3.3.7"
-
-gem "middleman-deploy", :git => "https://github.com/whitetrefoil/middleman-deploy"
+gem 'middleman', '>= 4.0.0'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

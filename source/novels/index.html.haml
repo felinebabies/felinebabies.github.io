@@ -4,7 +4,7 @@ current: novel
 ---
 %h1
   小説一覧
-- sitemap.where(:doctype.equal => "novel").all.each do |item|
+- sitemap.resources.select {|item| item.data['doctype'] == 'novel'}.each do |item|
   - tagArray = ['topic']
   - if item.data.tags.include? '性的表現' then
     - h2class = 'bg_pink'
@@ -19,7 +19,7 @@ current: novel
   %h2
     タグ一覧
   :ruby
-    tagArray = sitemap.where(:doctype.equal => "novel").all.map do |item|
+    tagArray = sitemap.resources.select {|item| item.data['doctype'] == 'novel'}.map do |item|
       item.data.tags
     end
     tagArray.flatten!.uniq!

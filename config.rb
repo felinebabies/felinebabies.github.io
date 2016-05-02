@@ -70,9 +70,11 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+=begin
 # デプロイの設定
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
   deploy.branch = 'master'
 end
+=end
