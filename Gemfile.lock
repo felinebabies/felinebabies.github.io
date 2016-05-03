@@ -120,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (>= 4.0.0)
+  middleman-deploy (= 2.0.0.pre.alpha)
   middleman-livereload (~> 3.1.0)
   tzinfo-data
   wdm (~> 0.1.0)
