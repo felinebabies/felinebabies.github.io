@@ -148,4 +148,3 @@ function boardgeneration(){
 function setboardgeneration(){
   return function() { boardgeneration(); };
 }
-;
