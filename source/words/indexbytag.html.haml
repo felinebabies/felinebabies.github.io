@@ -6,7 +6,7 @@ current: words
   %h1
     タグ別用語一覧
   :ruby
-    tagArray = sitemapresources.select {|item| item.data['doctype'] == 'word'}.map do |item|
+    tagArray = sitemap.resources.select {|item| item.data['doctype'] == 'word'}.map do |item|
       item.data.tags
     end
     tagArray.flatten!.uniq!
@@ -15,6 +15,6 @@ current: words
     %h2{:id => tag}
       = tag
     .topic
-      - sitemap.where(:doctype.equal => "word").where(:tags.include => tag).all.each do |item|
+      - sitemap.resources.select {|item| item.data['doctype'] == 'word' && item.data.has_key?('tags') && item.data['tags'].include?(tag)}.each do |item|
         %p
           = link_to item.data.title, item.url
