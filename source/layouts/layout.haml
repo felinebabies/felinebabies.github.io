@@ -27,12 +27,12 @@
       ga('send', 'pageview');
   %body
     .container
-      .grid
+      .grid.headerbackground
         .col-1-1
           %header
             = link_to '/index.html' do
               = image_tag 'header001.png',{width: '960px', height:'90px'}
-      .grid
+      .grid.bodybackground
         .col-3-12
           .sidebar
             = partial 'sidebar', :locals => {:current => current_page.data.current}
@@ -45,7 +45,7 @@
               = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
             = yield
 
-      .grid
+      .grid.footerbackground
         .col-1-1
           %footer
             Copyright &copy;
