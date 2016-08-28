@@ -9,23 +9,38 @@ body {
 html, body {
   height: 100%; }
 
+body {
+  background-image: url("/images/gravel-296357_960_720.jpg"); }
+
 .container {
   height: 100%;
   min-height: 100%;
   margin: 0 auto; }
 
+.bodybackground {
+  background-color: #F5FFF5;
+  border-left: solid 1px #DDD;
+  border-right: solid 1px #DDD; }
+
 header {
-  height: 90px;
-  background-color: #FFFFCC; }
+  height: 90px; }
+
+.headerbackground {
+  background-color: #FFFFCC;
+  border-left: solid 1px #DDD;
+  border-right: solid 1px #DDD; }
 
 footer {
   width: 100%;
-  background-color: #FFFFCC;
-  padding: 15px;
-  border-top: solid 1px #EEEECC; }
+  padding: 15px; }
+
+.footerbackground {
+  border-top: solid 1px #EEEECC;
+  border-left: solid 1px #DDD;
+  border-right: solid 1px #DDD;
+  background-color: #FFFFCC; }
 
 .content {
-  background-color: #F5FFF5;
   display: block;
   padding: 20px;
   /* 記事 */ }
