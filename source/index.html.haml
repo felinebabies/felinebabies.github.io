@@ -6,8 +6,15 @@ current: top
   Primates selection
 %p
   同人ゲーム及び小説「プライメイツ・セレクション」関連資料サイト
+%p.align_center
+  = link_to 'game/battleofsideheim/index.html' do
+    = image_tag 'c91_cut.png'
+  %br
+  次回作同人ゲーム
+  = link_to 'game/battleofsideheim/index.html' do
+    Primates selection ～サイドヘイムの戦い～
 
-.section
+.section.updates
   %h2
     Updates
   .topic
@@ -20,7 +27,9 @@ current: top
     %h3
       Games
     %p
-      Copyright &copy; 2015 Vestalis Quintet
+      Copyright &copy;
+      = Time.now.year
+      Vestalis Quintet
 
     %h3
       Novels
