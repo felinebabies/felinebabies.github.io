@@ -23,6 +23,7 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (0.9.2)
     contracts (0.12.0)
+    dotenv (2.1.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -98,6 +99,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    rbsync (0.0.15)
     sass (3.4.21)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -117,8 +119,10 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  dotenv
   middleman (>= 4.0.0)
   middleman-deploy (= 2.0.0.pre.alpha)
   middleman-livereload (~> 3.4.3)
+  rbsync
   tzinfo-data
   wdm (~> 0.1.0)

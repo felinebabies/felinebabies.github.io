@@ -14,3 +14,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw, :x64_mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw, :x64_mingw]
 
 gem "middleman-deploy", '2.0.0.pre.alpha', platforms: [:ruby]
+
+gem "dotenv"
+gem "rbsync"
