@@ -1,0 +1,26 @@
+---
+title: ピート君の年齢に見る抜け道の実例
+doctype: novel
+current: novel
+tags:
+  - ショートショート
+  - 超短編
+  - javascript
+  - メタ空間
+  - 小話
+  - Syuji
+jsfiles:
+  - https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+  - peteage.js
+cssfiles:
+  - peteage.css
+---
+.maincontents
+  = partial "pete_age_main"
+  = link_to "2085年に会議を開催した場合", "./pete_age.html?year=2085&month=0&day=1"
+.annopetronius
+  = partial "pete_after_birth"
+  = link_to "こうなるはずでした", "./pete_age.html?year=2016&month=9&day=10"
+.age18
+  = partial "pete_age_18"
+  = link_to "こうなるはずでした", "./pete_age.html?year=2016&month=9&day=10"
