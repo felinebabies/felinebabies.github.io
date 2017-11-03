@@ -7,45 +7,72 @@ body {
 	color: #000;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 html,body {
   height: 100%;
 }
 body {
-	background-image: url("/images/gravel-296357_960_720.jpg");
+	background-image: url("/images/abandoned-factory-1513096_1280.jpg");
+	background-attachment: fixed;
+	background-size:cover;
 }
 
+$footerheight: 3.5em;
+
 .container {
-	height: 100%;
-	min-height: 100%;
+  min-height: 100%;
 	margin: 0 auto;
+	position: relative;
+	padding-bottom: $footerheight + 1em;
 }
 
 .bodybackground {
-	background-color: #F5FFF5;
-	border-left: solid 1px #DDD;
-	border-right: solid 1px #DDD;
+	background-color: #fff9f4;
+	border: solid 3px #280606;
+	border-radius: 5px;
 }
 
 header {
-	height:90px;
+	min-height:3.5em;
+	margin: 0 auto;
+	max-width: 1140px;
+	min-width: 755px;
+
+	a {
+		text-decoration: none;
+		color: #FFF;
+	}
+
+	.sitetitle {
+		padding-top: 10px;
+		font-size: 150%;
+	}
 }
 
 .headerbackground {
-	background-color: #FFFFCC;
-	border-left: solid 1px #DDD;
-	border-right: solid 1px #DDD;
+	border-top: 5px solid #001342;
+	background-color: #280606;
+	margin-bottom: 1em;
 }
 
 footer {
 	width: 100%;
 	padding: 15px;
+	margin: 0 auto;
+	max-width: 1140px;
+	min-width: 755px;
 }
 
 .footerbackground {
-	border-top: solid 1px #EEEECC;
-	border-left: solid 1px #DDD;
-	border-right: solid 1px #DDD;
-	background-color: #FFFFCC;
+		bottom: 0;
+		position: absolute;
+		background-color: #280606;
+		color: #FFF;
+		width: 100%;
+		height: $footerheight;
 }
 
 .content {
@@ -53,16 +80,15 @@ footer {
 	padding: 20px;
 	/* 記事 */
 	.section {
-		border: solid 1px #CCF;
 		margin-bottom: 15px;
 		border-radius: 8px;
 		p {
 			margin: 0;
 		}
 		.topic {
-			background:#FFFAE4 ;
+			background:#FFF ;
 			padding: 15px;
-			border-radius: 0 0 8px 8px;
+			border-radius: 0 0 5px 5px;
 			p {
 				margin-bottom: 10px;
 			}
@@ -77,11 +103,10 @@ footer {
 			background: #FF55BB;
 		}
 		h1, h2 {
-			padding: 10px;
+			padding: 0 0 0 5px;
 			margin: 0;
-			background:#E4F8FF ;
 			display: block;
-			border-radius: 8px 8px 0 0;
+			border-left: solid 5px #4f2405;
 		}
 	}
 	.section.updates {
@@ -89,6 +114,10 @@ footer {
 			height: 10em;
 			overflow-y: scroll;
 			overflow-x: auto;
+
+			dl {
+				margin-top: 0;
+			}
 
 			dd {
 				margin-bottom: 10px;
@@ -101,39 +130,32 @@ body > .container {
 	height: auto;
 }
 
-.sidebar {
+.globalmenu {
 	width: 100%;
-	height :100%;
+	height :2em;
+	background-color: #4f2405;
 	ul {
 		padding: 0;
-		margin: 0;
+		margin: 0 auto;
+		max-width: 1140px;
+		min-width: 755px;
 		li {
-			height: 50px;
+			display: inline-block;
 			list-style: none;
-			background-color: #CCCCDD;
-			border-top: 5px solid #DDDDEE;
-			border-right: 5px solid #DDDDEE;
-			border-left: 5px solid #AAC;
-			border-bottom: 5px solid #AAC;
+			padding: 5px;
 			a {
 				display: block;
 				width: 100%;
 				height: 100%;
 				text-decoration: none;
-				color: #333;
+				color: #FFF;
 				span.LinkLabel {
 					display: block;
-					padding-left: 0.5em;
-					padding-top: 0.5em;
 				}
 			}
 		}
 		li.Current {
-			background-color: #ffd8d1;
-			border-top: 5px solid #ffe8e1;
-			border-right: 5px solid #ffe8e1;
-			border-left: 5px solid #CAA;
-			border-bottom: 5px solid #CAA;
+			background-color: #280606;
 		}
 	}
 }
@@ -150,4 +172,9 @@ body > .container {
 }
 .align_right {
 	text-align: right;;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
 }

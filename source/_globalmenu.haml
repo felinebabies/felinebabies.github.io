@@ -1,0 +1,14 @@
+%ul
+  - data.globalmenu.each_with_index do |item, i|
+    :ruby
+      classArray = []
+      if i == 0 then
+        classArray << "FirstItem"
+      end
+      if item[0] == current then
+        classArray << "Current"
+      end
+    %li{:class => classArray.join(' ')}
+      = link_to item[1] do
+        %span.LinkLabel
+          = item[0]

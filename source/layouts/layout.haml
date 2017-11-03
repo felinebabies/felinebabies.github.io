@@ -11,6 +11,7 @@
           = stylesheet_link_tag css
       - else
         = stylesheet_link_tag current_page.data.cssfiles
+    = javascript_include_tag "jquery-3.2.1.min"
     = javascript_include_tag "all"
     - if current_page.data.jsfiles != nil then
       - if current_page.data.jsfiles.instance_of?(Array) then
@@ -27,17 +28,15 @@
       ga('send', 'pageview');
   %body
     .container
-      .grid.headerbackground
-        .col-1-1
-          %header
+      .headerbackground
+        %header
+          .sitetitle
             = link_to '/index.html' do
-              = image_tag 'header001.png',{width: '960px', height:'90px'}
-      .grid.bodybackground
-        .col-3-12
-          .sidebar
-            = partial 'sidebar', :locals => {:current => current_page.data.current}
-
-        .col-9-12
+              Primates selection
+        .globalmenu
+          = partial 'globalmenu', :locals => {:current => current_page.data.current}
+      .grid.grid-pad.bodybackground
+        .col-1-1
           %article.content
             - if current_page.data.doctype == 'novel' then
               = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
@@ -45,11 +44,10 @@
               = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
             = yield
 
-      .grid.footerbackground
-        .col-1-1
-          %footer
-            Copyright &copy;
-            = Date.today.strftime("%Y")
-            Syuji, &copy;
-            = Date.today.strftime("%Y")
-            Vestalis Quintet
+      .footerbackground
+        %footer
+          Copyright &copy;
+          = Date.today.strftime("%Y")
+          Syuji, &copy;
+          = Date.today.strftime("%Y")
+          Vestalis Quintet
