@@ -39,6 +39,25 @@ function init(canvas_id){
   nextbutton.value = "がんばれ♥";
   nextbutton.onclick = setboardgeneration();
   gameform.appendChild(nextbutton);
+  gameform.appendChild(document.createElement("br"));
+  gameform.appendChild(document.createElement("br"));
+
+  //定期実行間隔テキストボックス
+  var intervaltextbox = document.createElement("input");
+  intervaltextbox.id = "intervalbox";
+  intervaltextbox.type = "text";
+  intervaltextbox.value = "1";
+  gameform.appendChild(intervaltextbox);
+  gameform.appendChild(document.createTextNode("秒ごとに世代を進める"));
+  gameform.appendChild(document.createElement("br"));
+  gameform.appendChild(document.createElement("br"));
+
+  //定期実行チェックボックス
+  var repeatcheckbox = document.createElement("input");
+  repeatcheckbox.id = "repeatbox";
+  repeatcheckbox.type = "checkbox";
+  gameform.appendChild(repeatcheckbox);
+  gameform.appendChild(document.createTextNode("定期的に世代を進める"));
 
   var objbody;
   if(typeof canvas_id === 'undefined'){
@@ -48,6 +67,19 @@ function init(canvas_id){
     objbody = document.getElementById(canvas_id);
   }
   objbody.appendChild(gameform);
+
+  // 定期実行チェックの切り替え
+  var intervalevent;
+  $("#repeatbox").on("change", function(){
+    if ($(this).prop('checked')) {
+      var interval = $("#intervalbox").val();
+      intervalevent = setInterval(function(){
+        boardgeneration();
+      }, interval * 1000);
+    } else {
+      clearInterval(intervalevent);
+    }
+  });
 }
 
 //次世代でのセルの生存状態を取得する
