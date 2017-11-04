@@ -4,17 +4,6 @@ current: novel
 ---
 %h1
   小説一覧
-- sitemap.resources.select {|item| item.data['doctype'] == 'novel'}.each do |item|
-  - tagArray = ['topic']
-  - if item.data.tags.include? '性的表現' then
-    - h2class = 'bg_pink'
-    - tagArray << 'bg_pink'
-  .section
-    %h2{:class => h2class}
-      = link_to item.data.title, item.url
-    %div{:class => tagArray.join(' ')}
-      %p
-        = partial 'taglist', :locals => {:tagArray => item.data.tags, :linkPage => '/novels/indexbytag.html'}
 .section
   %h2
     タグ一覧
@@ -27,3 +16,14 @@ current: novel
     %p
       -tagArray.each do |tag|
         = link_to tag, "indexbytag.html\##{tag}"
+- sitemap.resources.select {|item| item.data['doctype'] == 'novel'}.each do |item|
+  - tagArray = ['topic']
+  - if item.data.tags.include? '性的表現' then
+    - h2class = 'bg_pink'
+    - tagArray << 'bg_pink'
+  .section
+    %h2{:class => h2class}
+      = link_to item.data.title, item.url
+    %div{:class => tagArray.join(' ')}
+      %p
+        = partial 'taglist', :locals => {:tagArray => item.data.tags, :linkPage => '/novels/indexbytag.html'}
