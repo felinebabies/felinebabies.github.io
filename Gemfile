@@ -2,6 +2,8 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
+gem 'eventmachine', github: 'eventmachine/eventmachine', branch: :master
+
 gem 'middleman', '>= 4.0.0'
 
 # Live-reloading plugin
