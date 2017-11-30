@@ -13,7 +13,7 @@ html, body {
   height: 100%; }
 
 body {
-  background-image: url("/images/abandoned-factory-1513096_1280.jpg");
+  background-image: url("../images/abandoned-factory-1513096_1280.jpg");
   background-attachment: fixed;
   background-size: cover; }
 
