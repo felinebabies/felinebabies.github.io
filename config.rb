@@ -53,6 +53,11 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+# 相対パスの設定
+set :relative_links, true
+set :strip_index_file, false
+activate :relative_assets
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
