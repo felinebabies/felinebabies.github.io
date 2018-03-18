@@ -137,3 +137,6 @@ body > .container {
 .fixed {
   position: fixed;
   top: 0; }
+
+.tweetbutton {
+  height: 37px; }
