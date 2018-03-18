@@ -3,7 +3,10 @@
   %head
     %meta{charset: "utf-8"}
     %title
-      = current_page.data.title || "Primates selection"
+      - if current_page.data.title
+        = "#{current_page.data.title} : Primates selection"
+      - else
+        = "Primates selection"
     = stylesheet_link_tag "normalize", "common", "simplegrid"
     - if current_page.data.cssfiles != nil then
       - if current_page.data.cssfiles.instance_of?(Array) then
@@ -55,12 +58,12 @@
       .grid.grid-pad.bodybackground
         .col-1-1
           %article.content
+            = partial 'tweetbutton'
             - if current_page.data.doctype == 'novel' then
               = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/novels/indexbytag.html'}
             - if current_page.data.doctype == 'word' then
               = partial 'taglist', :locals => {:tagArray => current_page.data.tags, :linkPage => '/words/indexbytag.html'}
             = yield
-            = partial 'tweetbutton'
 
       .footerbackground
         %footer
