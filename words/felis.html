@@ -9,6 +9,24 @@
 <script src="../javascripts/jquery-3.2.1.min.js"></script>
 <script src="../javascripts/all.js"></script>
 <script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -83,6 +101,10 @@ words
 <h2 id="section-3">民生用フェリスモデル</h2>
 <p>　表向きには、初めて世に出たトランスヒューマンという事になっています。<br />
 　労働力や、耳と尾以外は自由に操作可能な容姿を活かした活動に従事させる目的を大々的に宣伝され、結果急激にその人口を増やしていきました。</p>
+
+<div class='tweetbutton'>
+<a class='twitter-share-button' data-size='large' href='https://twitter.com/intent/tweet'></a>
+</div>
 
 </article>
 </div>

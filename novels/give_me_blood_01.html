@@ -9,6 +9,24 @@
 <script src="../javascripts/jquery-3.2.1.min.js"></script>
 <script src="../javascripts/all.js"></script>
 <script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -95,6 +113,10 @@ words
 <p>　さすが私営の（怪しい）血液銀行、うるさいこと詮索せずにお金さえ払えば売ってくれますね。お金さえ払えば。……ええ、400mlで20000Crはちょっと、いえ、物凄くお財布に響くのですが。ええと、私が必要とする血液の量は１週間につき800mlなので、１ヵ月約16万Cｒ？……無理です。家賃と食費だって別で払わなきゃいけないのに。ああ、神野様。何故私をおいて逝ってしまったのですか（泣）。このままでは私がそっちへ逝くのも時間の問題です……。</p>
 
 <p>　……現実逃避してる場合じゃありません。とりあえず、この「無職」という危機を何とかしないと、本当に神野様のところへ逝っちゃいます。こんな忠誠心の薄いヤツでごめんなさい。まだ死にたくないんで。とりあえず、手っ取り早くまとまったお金が手に入る職業といったらアレしかありません。今流行の「ハンター」ってヤツです。基本は賞金首狩り、遺跡が見つかれば荒らしに行き、他に仕事がなければ何でも屋をする。聞けば聞くほどアンダーグラウンドな仕事ですが、元々この街は地下です。まともな警察組織が無い今どきでは結構重宝されてるらしいです。この仕事はちょっと腕に自慢があれば成り立つので、私のようなヒトにはピッタリの仕事です。本当は私は狩られる側なのは気にしない方向で。そうと決まれば早速、近所のハンター達が集まる店「銀の鈴亭」に行ってみたいと思います。</p>
+
+<div class='tweetbutton'>
+<a class='twitter-share-button' data-size='large' href='https://twitter.com/intent/tweet'></a>
+</div>
 
 </article>
 </div>

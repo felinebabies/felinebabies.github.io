@@ -9,6 +9,24 @@
 <script src="../../javascripts/jquery-3.2.1.min.js"></script>
 <script src="../../javascripts/all.js"></script>
 <script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -75,6 +93,10 @@ words
 <p>　琥珀色のトーンに統一された画面から一つを選び、金を払う。「17番宮」とプレートを掲げられたエアロックに入り、呼吸チューブを咥えると、流れ込む羊水がエアロックを満たした。今私は、巨大な胎内に居るのだ。</p>
 
 <p>　エアロックが開くと、受付で選んだ子が私を迎えてくれた。産まれてさえいれば、入学する頃だろうか……しかし、この子に年齢は無い。この羊水で満たされた部屋、拡大された子宮から一度も出たことがないこの子は、法律上はまだ胎児でしかない。背は1メートルを超えても、臍の緒はついたままだ。</p>
+
+<div class='tweetbutton'>
+<a class='twitter-share-button' data-size='large' href='https://twitter.com/intent/tweet'></a>
+</div>
 
 </article>
 </div>

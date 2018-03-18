@@ -9,6 +9,24 @@
 <script src="../../javascripts/jquery-3.2.1.min.js"></script>
 <script src="../../javascripts/all.js"></script>
 <script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -168,6 +186,10 @@ words
 　帰る時にはすこし落ち着いた。まあ、衝撃的な体験だけど、なんか悪い気はしないんだよな。</p>
 
 <p>　明日は土曜日、鳴俊とは休み中の約束が無いから、次に合うのは月曜日か。俺の家も同じアパートだから、帰り道はとても短い。帰りの挨拶をしてから3分も経たないうちに、自宅の玄関にたどり着いた。</p>
+
+<div class='tweetbutton'>
+<a class='twitter-share-button' data-size='large' href='https://twitter.com/intent/tweet'></a>
+</div>
 
 </article>
 </div>
